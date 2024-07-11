@@ -1,30 +1,40 @@
 # BioLogin
-A webapp that allows visitors to enroll and subsequently log-in on the system through name, surname and face identification.
+A webapp that allows visitors to enroll with name, surname and photo, and subsequently log-in on the system through face identification alone.
 
 The repository contains both the client-side written in React and server-side written in flask, which can be modified to accomodate the specific task.
 The model for face recognition was taken from: https://face-recognition.readthedocs.io/en/latest/readme.html.
 
-It works on Linux.
+# Setup
+Make sure to have downloaded python 3.11.9!
 
-## To run the App
-You need to use VSC and open two terminals to start the client and server side respectively.
+Create a virtual environment with the Python3.11.9 interpreter:
 
-### Starting the Client-Side
-In the first terminal, navigate to the "capture-photo" folder that is found in the root of the project and type
 ```bash
-npm start
+python3.11 -m venv verification_env
 ```
 
-Run the command and let it execute.
-This will run the React App which will open up in your browser.
+Activate it:
+```bash
+source verification_env/bin/activate
+```
 
-### Starting the Server-Side
-On the second terminal, navigate to the root of the project and type:
+Install the dependencies from the requirements.txt file:
+```bash
+pip install -r requirements.txt
+```
+
+# Running the app
+Once the setup is completed open two different terminals.
+
+Run the back-end part by running:
 ```bash
 python3 app.py
 ```
 
-and run the command.
+Run the front-end part by navigating in the "photo-capture" directory and running
+```bash
+npm start
+```
 
 ### Conclusion
-These two commands should allow you to interact with the webpage, enroll and log-in through the use of face identification.
+And now you too can test the magic of face recognition!
